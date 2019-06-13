@@ -19,6 +19,7 @@ type Configure struct {
 	Bot          Bot    `json:"bot"`
 	Minutes2Call uint64 `json:"minutes2call"`
 	Times2OK     int    `json:"times2ok"`
+	Debug        bool   `json:"debug"`
 }
 type Bot struct {
 	Token     string `json:"token"`
@@ -81,7 +82,9 @@ func getURLs() {
 				SendMessage(conf.Bot.ChannelKo, str)
 				errors++
 			} else {
-				fmt.Printf("%s %v %s %d\n", res.url, res.elapsed, res.status, res.size)
+				if conf.Debug {
+					SendMessage(conf.Bot.ChannelOk, fmt.Sprintf("%s %v %s %d\n", res.url, res.elapsed, res.status, res.size))
+				}
 			}
 		}
 	}

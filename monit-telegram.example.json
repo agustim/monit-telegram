@@ -12,5 +12,6 @@
 	],
 "bot": { "token" : "9999:XXXXXX", "ChannelOk": -10000000000, "ChannelKo": -10000000001 },
 "minutes2call" : 1,
-"times2ok" : 60
+"times2ok" : 60,
+"debug": true
 }
