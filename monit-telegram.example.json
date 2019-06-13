@@ -1,0 +1,16 @@
+{
+"urls": 
+	[
+		{ "url": "https://example.com", "header": null },
+		{ "url": "https://github.com",
+		"header": [
+			{ "key": "accept", "value": "application/json" },
+			{ "key": "key", "value": "value" }
+		]
+		},
+		{ "url": "https://test.com", "header": null }
+	],
+"bot": { "token" : "9999:XXXXXX", "ChannelOk": -10000000000, "ChannelKo": -10000000001 },
+"minutes2call" : 1,
+"times2ok" : 60
+}
