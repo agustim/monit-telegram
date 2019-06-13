@@ -19,7 +19,8 @@ Sistema automatic per fer crides web (GET de moment), cada "minutes2call" vegade
 	],
 "bot": { "token" : "9999:XXXXXX", "ChannelOk": -10000000000, "ChannelKo": -10000000001 },
 "minutes2call" : 1,
-"times2ok" : 60
+"times2ok" : 60, 
+"debug": false
 }
 ```
 
