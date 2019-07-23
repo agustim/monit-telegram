@@ -112,6 +112,14 @@ func get(ch chan result, url URL) {
 	if err == nil {
 		defer resp.Body.Close()
 	}
+	if err != nil {
+		ch <- result{
+			url:     url.Url,
+			elapsed: time.Since(start),
+			err:     err,
+		}
+		return
+	}
 	if resp.StatusCode >= 400 {
 		ch <- result{
 			url:     url.Url,
